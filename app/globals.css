@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+/* Custom theme configuration for Tailwind v4 */
+@theme {
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+  
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ede9fe;
+  --color-violet-200: #ddd6fe;
+  --color-violet-300: #c4b5fd;
+  --color-violet-400: #a78bfa;
+  --color-violet-500: #8b5cf6;
+  --color-violet-600: #7c3aed;
+  --color-violet-700: #6d28d9;
+  --color-violet-800: #5b21b6;
+  --color-violet-900: #4c1d95;
+  
+  --color-cyan-50: #ecfeff;
+  --color-cyan-100: #cffafe;
+  --color-cyan-200: #a5f3fc;
+  --color-cyan-300: #67e8f9;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-600: #0891b2;
+  --color-cyan-700: #0e7490;
+  --color-cyan-800: #155e75;
+  --color-cyan-900: #164e63;
+  
+  --font-family-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-family-sans);
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* Component styles using standard CSS */
+.section-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+}
+
+.contact-button {
+  background-color: white;
+  border: 2px solid #1f2937;
+  color: #1f2937;
+  padding: 0.5rem 2rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #1f2937;
+  color: white;
+}
+
+.primary-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #1d4ed8;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.profile-image-wrapper {
+  position: relative;
+}
+
+.profile-image {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 9999px;
+  border: 4px solid #22d3ee;
+  object-fit: cover;
+}
+
+.profile-label {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #22d3ee;
+  color: white;
+  padding: 0.25rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 9999px;
+}
+
+.profile-name-card {
+  background-color: #cffafe;
+  border: 2px solid #22d3ee;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.profile-name {
+  color: #0891b2;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.nav-link {
+  color: #7c3aed;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #5b21b6;
+}
+
+.qualifications-section {
+  background-color: #eff6ff;
+  border: 2px solid #3b82f6;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.personal-info-section {
+  background-color: #eff6ff;
+  border: 2px solid #60a5fa;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.projects-section {
+  background-color: #f5f3ff;
+  border: 2px solid #a78bfa;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  border: 1px solid #ddd6fe;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slideshow-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.slide-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: #c4b5fd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slide-dot:hover,
+.slide-dot.active {
+  background-color: #8b5cf6;
+}
