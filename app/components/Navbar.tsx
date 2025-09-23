@@ -20,6 +20,9 @@ export default function Navbar() {
             <Link href="/projects" className="nav-link">
               Projects & Achievements
             </Link>
+            <Link href="/chat" className="nav-link">
+              Chat
+            </Link>
             <Link href="/contact" className="nav-link">
               Contact
             </Link>

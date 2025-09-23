@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import FloatingChat from "./components/FloatingChat";
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
@@ -28,6 +29,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <FloatingChat />
       </body>
     </html>
   );
