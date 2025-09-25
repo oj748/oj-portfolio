@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ 
-        query: `Please respond in first person as Ojaswini. ${query}` 
+        query: `Please respond in first person. Keep your answers concise and use bullet points when possible. Be brief and to the point. ${query}` 
       }),
     });
 
