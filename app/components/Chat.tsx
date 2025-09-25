@@ -99,7 +99,7 @@ export default function Chat() {
             className={`message ${message.isUser ? 'user-message' : 'bot-message'}`}
           >
             <div className="message-content">
-              <p>{message.text}</p>
+              <div dangerouslySetInnerHTML={{ __html: message.text }} />
               <span className="message-time">
                 {message.timestamp.toLocaleTimeString([], { 
                   hour: '2-digit', 
